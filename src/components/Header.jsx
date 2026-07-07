@@ -166,13 +166,10 @@ function Header({ embedded = false, isPastHero = false, showTopper = false }) {
                   })}
                 </div>
 
-                {/* Premium Divider */}
-                <div className="mb-4 h-px bg-gradient-to-r from-transparent via-accent-gold/30 to-transparent" />
-
-                {/* Contact Button - Simple Gray */}
+                {/* Contact Button - Modern Gray Box */}
                 <Link
                   to="/contact"
-                  className="w-full px-5 py-2.5 bg-white/12 text-white text-sm font-body font-semibold tracking-[0.08em] rounded-lg hover:bg-white/20 transition-all duration-300 text-center uppercase"
+                  className="w-full px-5 py-3 bg-gradient-to-br from-gray-700/80 to-gray-800/80 text-white text-sm font-display font-bold tracking-[0.12em] rounded-xl hover:from-gray-600/90 hover:to-gray-700/90 transition-all duration-300 text-center uppercase shadow-lg border border-gray-600/30"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Get Consultation
