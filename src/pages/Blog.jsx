@@ -76,7 +76,7 @@ function Blog() {
             </h2>
 
             <p className="font-body text-gray-600 text-sm sm:text-base text-center max-w-md leading-relaxed mb-8">
-              We're crafting thoughtful articles on investment strategy, market insights, and wealth stewardship. Check back soon for our latest perspectives.
+              We&apos;re crafting thoughtful articles on investment strategy, market insights, and wealth stewardship. Check back soon for our latest perspectives.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 items-center">

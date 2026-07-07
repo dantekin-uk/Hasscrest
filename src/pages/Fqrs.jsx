@@ -1,4 +1,4 @@
-import { ChevronDown, HelpCircle, Sparkles } from 'lucide-react'
+import { ChevronDown, HelpCircle } from 'lucide-react'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Cta from '../components/Cta'
@@ -181,7 +181,7 @@ function Fqrs() {
                 </h1>
               </div>
               <p className="font-body text-white/80 text-[0.9rem] sm:text-[1.05rem] lg:text-[1.15rem] leading-relaxed max-w-2xl animate-fadeInUp delay-100">
-                Comprehensive answers to help you understand HASS Crest's investment solutions and approach to wealth management.
+                Comprehensive answers to help you understand HASS Crest&apos;s investment solutions and approach to wealth management.
               </p>
             </div>
           </div>

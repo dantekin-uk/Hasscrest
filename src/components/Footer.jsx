@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowUpRight, Mail, MapPin, Phone, ShieldCheck } from 'lucide-react'
+import { ArrowUpRight, Mail, MapPin, ShieldCheck } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 

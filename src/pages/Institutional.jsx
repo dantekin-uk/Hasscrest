@@ -1,5 +1,4 @@
-import { Shield, TrendingUp, Leaf, LayoutGrid, BadgeCheck, Compass, Briefcase, Wallet, BarChart3, PieChart, Globe, ChevronRight, ShieldCheck, Landmark, Scale, FileText, Umbrella, Users, Building2, Heart, Handshake } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { ChevronRight, ShieldCheck, Landmark, Scale, FileText, Umbrella, Users, Building2, Heart, Handshake, Globe } from 'lucide-react'
 import Cta from '../components/Cta'
 import image9 from '../assets/image9.jpeg'
 
@@ -99,7 +98,7 @@ function Institutional() {
               {/* Paragraph 1: The Philosophy (The Box) */}
               <div className="border-l-4 border-primary-navy bg-gradient-to-br from-primary-navy/5 to-primary-navy/2 p-4 sm:p-5 rounded-lg transition-all duration-500 hover:bg-gradient-to-br hover:from-primary-navy/8 hover:to-primary-navy/4 hover:shadow-md">
                 <p className="font-body text-gray-800 text-[11px] sm:text-xs leading-relaxed">
-                  Hass Crest Capital recognizes that trust is earned through disciplined stewardship of our clients' assets and unwavering adherence to ethical business practices.
+                  Hass Crest Capital recognizes that trust is earned through disciplined stewardship of our clients&apos; assets and unwavering adherence to ethical business practices.
                 </p>
               </div>
 
@@ -296,7 +295,7 @@ function Institutional() {
 
                 {/* Right: Small Cards Grid (The Markets) */}
                 <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-2.5">
-                  {markets.map((market, index) => (
+                  {markets.map((market) => (
                     <div 
                       key={market.label}
                       className="group/market relative overflow-hidden rounded-lg sm:rounded-xl border border-primary-navy/5 bg-white p-2 sm:p-3 transition-all duration-500 hover:-translate-y-1 hover:border-accent-gold/30 hover:shadow-md flex flex-col items-center justify-center text-center gap-2 sm:gap-2.5"

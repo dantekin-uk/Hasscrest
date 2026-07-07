@@ -1,6 +1,5 @@
-import { BadgeCheck, Landmark, ShieldCheck, Eye, Rocket, ChevronRight } from 'lucide-react'
+import { Landmark, ShieldCheck, Eye, Rocket, BadgeCheck } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
 import Cta from '../components/Cta'
 import officeImage from '../assets/image.jpg'
 import infrastructureImage from '../assets/image8.jpeg'
@@ -183,7 +182,7 @@ function Firm() {
               {/* Paragraph 1 */}
               <div className="border-l-4 border-primary-navy bg-gradient-to-br from-primary-navy/5 to-primary-navy/2 p-4 sm:p-5 rounded-lg transition-all duration-500 hover:bg-gradient-to-br hover:from-primary-navy/8 hover:to-primary-navy/4 hover:shadow-md">
                 <p className="font-body text-gray-800 text-xs sm:text-sm leading-relaxed">
-               The financial services industry is undergoing profound transformation. Today's investment environment demands more than financial returns.
+               The financial services industry is undergoing profound transformation. Today&apos;s investment environment demands more than financial returns.
                 </p>
               </div>
 

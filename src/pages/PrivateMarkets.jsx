@@ -1,6 +1,4 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Shield, TrendingUp, BarChart3, PieChart, Globe, ChevronRight, Building2, Landmark, Handshake, Users, ShieldCheck, Scale } from 'lucide-react'
+import { ChevronRight, Building2, Landmark, Users, ShieldCheck, TrendingUp, Globe } from 'lucide-react'
 import Cta from '../components/Cta'
 import image10 from '../assets/image10.jpeg'
 import image11 from '../assets/image11.jpeg'

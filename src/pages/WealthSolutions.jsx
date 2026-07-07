@@ -1,5 +1,4 @@
 import { Shield, TrendingUp, Leaf, LayoutGrid, BadgeCheck, Compass, Briefcase, Wallet, BarChart3, PieChart, Globe, ChevronRight } from 'lucide-react'
-import { motion } from 'framer-motion'
 import Cta from '../components/Cta'
 import image1 from '../assets/image7.jpeg'
 
