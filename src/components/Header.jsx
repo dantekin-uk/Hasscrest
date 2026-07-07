@@ -114,41 +114,70 @@ function Header({ embedded = false, isPastHero = false, showTopper = false }) {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Modern Floating */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-primary-navy border-t border-white/10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-3">
-              {navLinks.map((link) => {
-                const isInternal = !!link.path
-                const Component = isInternal ? Link : 'a'
-                const props = isInternal 
-                  ? { to: link.path } 
-                  : { href: link.hash }
-                
-                const isActive = location.pathname === link.path
-                
-                return (
-                  <Component
-                    key={link.label}
-                    {...props}
-                    className={`block px-4 py-3 font-body font-semibold tracking-[0.1em] text-sm rounded-lg transition-all duration-300 ${
-                      isActive 
-                        ? 'bg-accent-gold/10 text-accent-gold' 
-                        : 'text-white/80 hover:text-accent-gold hover:bg-white/5'
-                    }`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Component>
-                )
-              })}
-              <Link
-                to="/contact"
-                className="w-full px-6 py-3 bg-accent-gold text-primary-navy text-sm font-display font-semibold tracking-[0.1em] rounded-full hover:bg-accent-gold-light transition-all duration-300 text-center"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Private Consultation
-              </Link>
+          <div className="lg:hidden fixed inset-0 z-40 top-[5rem] sm:top-[6rem]">
+            {/* Solid Backdrop */}
+            <div
+              className="absolute inset-0 bg-navy-deep/80"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+
+            {/* Floating Menu Card */}
+            <div className="relative mx-3 sm:mx-4 mt-4 bg-gradient-to-br from-navy-deep via-primary-navy to-navy-deep border border-accent-gold/20 rounded-3xl shadow-2xl overflow-hidden">
+              {/* Premium gradient top border */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent-gold/60 to-transparent" />
+
+              {/* Decorative premium blobs */}
+              <div className="absolute top-0 right-0 w-52 h-52 bg-accent-gold/8 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent-gold/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none" />
+
+              <div className="relative px-4 sm:px-6 py-6">
+                <div className="space-y-2.5 mb-4">
+                  {navLinks.map((link, index) => {
+                    const isInternal = !!link.path
+                    const Component = isInternal ? Link : 'a'
+                    const props = isInternal
+                      ? { to: link.path }
+                      : { href: link.hash }
+
+                    const isActive = location.pathname === link.path
+
+                    return (
+                      <Component
+                        key={link.label}
+                        {...props}
+                        className={`group relative block px-5 py-3.5 font-body font-bold tracking-[0.1em] text-sm sm:text-base transition-all duration-300 overflow-hidden ${
+                          isActive
+                            ? 'text-accent-gold'
+                            : 'text-white/80 hover:text-white'
+                        }`}
+                        style={{ animationDelay: `${index * 0.05}s` }}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <span className="relative z-10">
+                          {link.label}
+                        </span>
+                        {!isActive && (
+                          <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-accent-gold via-accent-gold-vivid to-transparent group-hover:w-full transition-all duration-300" />
+                        )}
+                      </Component>
+                    )
+                  })}
+                </div>
+
+                {/* Premium Divider */}
+                <div className="mb-4 h-px bg-gradient-to-r from-transparent via-accent-gold/30 to-transparent" />
+
+                {/* Contact Button - Simple Gray */}
+                <Link
+                  to="/contact"
+                  className="w-full px-5 py-2.5 bg-white/12 text-white text-sm font-body font-semibold tracking-[0.08em] rounded-lg hover:bg-white/20 transition-all duration-300 text-center uppercase"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Get Consultation
+                </Link>
+              </div>
             </div>
           </div>
         )}

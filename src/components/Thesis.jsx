@@ -87,22 +87,22 @@ function Thesis() {
                     return (
                       <div
                         key={card.title}
-                        className="group/card relative overflow-hidden rounded-xl sm:rounded-2xl border border-accent-gold/30 bg-white/[0.07] p-3 sm:p-4 lg:p-5 transition-all duration-500 -translate-y-1 sm:hover:-translate-y-1 sm:border-white/10 sm:bg-white/[0.04] sm:shadow-lg sm:hover:shadow-lg"
+                        className="group/card relative overflow-hidden rounded-xl sm:rounded-2xl border border-white/10 bg-white/[0.04] p-3 sm:p-4 lg:p-5 transition-all duration-500 sm:hover:-translate-y-1 sm:hover:shadow-lg"
                       >
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-primary-navy/5 opacity-100 sm:opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
-                        <div className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-accent-gold to-accent-gold-vivid sm:w-0 group-hover/card:w-full transition-all duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-primary-navy/5 opacity-0 sm:group-hover/card:opacity-100 transition-opacity duration-500" />
+                        <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-accent-gold to-accent-gold-vivid sm:group-hover/card:w-full transition-all duration-500" />
 
                         <div className="relative flex items-center gap-2 sm:gap-2.5 mb-2">
-                          <div className="h-7 w-7 sm:h-8 sm:w-9 rounded-lg bg-accent-gold/10 flex items-center justify-center text-accent-gold scale-110 sm:bg-white/5 sm:text-accent-gold/70 sm:group-hover/card:bg-accent-gold/10 sm:group-hover/card:text-accent-gold sm:group-hover/card:scale-110 transition-all duration-500 shrink-0 self-start">
+                          <div className="h-7 w-7 sm:h-8 sm:w-9 rounded-lg bg-white/5 flex items-center justify-center text-accent-gold/70 sm:group-hover/card:bg-accent-gold/10 sm:group-hover/card:text-accent-gold sm:group-hover/card:scale-110 transition-all duration-500 shrink-0 self-start">
                             <Icon className="h-3.5 w-3.5 sm:h-4 sm:h-4.5 sm:w-4.5" />
                           </div>
 
-                          <h3 className="font-display flex-1 text-[10px] sm:text-[11px] lg:text-[13px] font-bold text-accent-gold leading-[1.2] tracking-tight pt-0.5 sm:text-white sm:group-hover/card:text-accent-gold transition-colors">
+                          <h3 className="font-display flex-1 text-[10px] sm:text-[11px] lg:text-[13px] font-bold text-white sm:group-hover/card:text-accent-gold leading-[1.2] tracking-tight pt-0.5 transition-colors">
                             {card.title}
                           </h3>
                         </div>
 
-                        <p className="relative font-body text-[10px] sm:text-[11px] lg:text-xs text-white/80 leading-relaxed sm:text-white/50 sm:group-hover/card:text-white/80 transition-colors">
+                        <p className="relative font-body text-[10px] sm:text-[11px] lg:text-xs text-white/50 sm:group-hover/card:text-white/80 leading-relaxed transition-colors">
                           {card.text}
                         </p>
                       </div>

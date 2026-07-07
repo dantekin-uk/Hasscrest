@@ -4,22 +4,22 @@ import { Link } from 'react-router-dom'
 const mandates = [
   {
     icon: Landmark,
-    title: 'Institutional & Pension Assets',
+    title: 'Institutional Assets',
     description: 'Capital preservation and sustainable growth for institutional investors, pension schemes, and endowments.',
   },
   {
     icon: Building2,
-    title: 'Corporate Organizations',
+    title: 'Corporate Solutions',
     description: 'Strategic cash management and liquidity solutions for corporate organizations and SACCOs.',
   },
   {
     icon: Users,
-    title: 'Private Wealth & Family Offices',
+    title: 'Private Wealth',
     description: 'Personalized wealth preservation and long-term investment planning for high-net-worth individuals.',
   },
   {
     icon: Globe,
-    title: 'Diaspora Investors',
+    title: 'Global Diaspora',
     description: 'Ethical, diversified, professionally managed Sharia-compliant opportunities worldwide.',
   },
 ]
@@ -77,13 +77,13 @@ function Mandates() {
                   return (
                     <div
                       key={mandate.title}
-                      className="group/mandate relative overflow-hidden rounded-xl sm:rounded-2xl border border-primary-navy/10 sm:border-primary-navy/5 bg-white/95 p-3 sm:p-4 lg:p-5 transition-all duration-500 sm:-translate-y-1 sm:hover:-translate-y-1 sm:shadow-lg sm:hover:shadow-lg"
+                      className="group/mandate relative overflow-hidden rounded-xl sm:rounded-2xl border border-primary-navy/10 sm:border-primary-navy/5 bg-white p-3 sm:p-4 lg:p-5 transition-all duration-500 sm:hover:-translate-y-1 sm:hover:shadow-lg"
                     >
-                      <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-primary-navy/[0.02] opacity-100 sm:opacity-0 group-hover/mandate:opacity-100 transition-opacity duration-500" />
-                      <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-accent-gold to-accent-gold-vivid sm:w-0 group-hover/mandate:w-full transition-all duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-primary-navy/[0.02] opacity-0 sm:group-hover/mandate:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-accent-gold to-accent-gold-vivid group-hover/mandate:w-full transition-all duration-500" />
 
                       <div className="relative flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-                        <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-lg bg-primary-navy/5 flex items-center justify-center text-primary-navy/30 sm:group-hover/mandate:bg-accent-gold/10 sm:group-hover/mandate:text-accent-gold sm:group-hover/mandate:scale-110 transition-all duration-500 shrink-0 self-start">
+                        <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-lg bg-primary-navy/8 flex items-center justify-center text-primary-navy/40 sm:group-hover/mandate:bg-accent-gold/10 sm:group-hover/mandate:text-accent-gold sm:group-hover/mandate:scale-110 transition-all duration-500 shrink-0 self-start">
                           <Icon className="h-4 w-4 sm:h-4.5 sm:w-4.5" />
                         </div>
 
@@ -92,7 +92,7 @@ function Mandates() {
                         </h3>
                       </div>
 
-                      <p className="relative font-body text-[10px] sm:text-[11px] lg:text-xs text-gray-500 leading-relaxed sm:group-hover/mandate:text-gray-700 transition-colors">
+                      <p className="relative font-body text-[10px] sm:text-[11px] lg:text-xs text-gray-600 leading-relaxed sm:group-hover/mandate:text-gray-700 transition-colors">
                         {mandate.description}
                       </p>
                     </div>
