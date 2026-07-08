@@ -18,6 +18,7 @@ const quickLinks = [
 
 const resourceLinks = [
   { label: 'Blog', href: '/blog' },
+  { label: 'News', href: '/#news' },
 ]
 
 const socials = [
@@ -124,176 +125,169 @@ function Footer() {
         <div className="absolute top-0 left-1/4 w-80 h-80 bg-accent-gold/6 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-navy-light/15 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 mb-8">
-            {/* Brand */}
-            <motion.div 
-              className="sm:col-span-2 lg:col-span-4" 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <Link to="/" className="inline-flex items-center gap-3 mb-4 group">
-                <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-accent-gold/25 via-white/5 to-transparent border border-white/10 shadow-[0_0_22px_rgba(212,175,55,0.12)] group-hover:shadow-[0_0_34px_rgba(212,175,55,0.22)] transition-all duration-300">
-                  <div className="absolute inset-[1px] rounded-[0.7rem] bg-navy-deep/60" />
-                  <span className="relative z-10 w-full h-full flex items-center justify-center font-display font-extrabold tracking-[0.08em] text-accent-gold">
-                    H
-                  </span>
-                </div>
-                <div className="leading-tight">
-                  <div className="font-display font-semibold tracking-[0.08em] text-white">
-                    Hass Crest Capital LImited
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+          <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-12 mb-6">
+            {/* Left side - Brand */}
+            <div className="flex-1">
+              <div className="grid grid-cols-1 gap-6">
+                {/* Brand */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                >
+                  <Link to="/" className="inline-flex items-center gap-3 mb-4 group">
+                    <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-accent-gold/25 via-white/5 to-transparent border border-white/10 shadow-[0_0_22px_rgba(212,175,55,0.12)] group-hover:shadow-[0_0_34px_rgba(212,175,55,0.22)] transition-all duration-300">
+                      <div className="absolute inset-[1px] rounded-[0.7rem] bg-navy-deep/60" />
+                      <span className="relative z-10 w-full h-full flex items-center justify-center font-display font-extrabold tracking-[0.08em] text-accent-gold">
+                        H
+                      </span>
+                    </div>
+                    <div className="leading-tight">
+                      <div className="font-display font-semibold tracking-[0.08em] text-white">
+                        Hass Crest Capital LImited
+                      </div>
+                    </div>
+                  </Link>
+
+                  <p className="font-body text-white/50 text-[11px] sm:text-xs leading-relaxed mb-4 max-w-[280px]">
+                    Hass Crest Capital is a CMA-licensed investment firm delivering Sharia-compliant wealth solutions across East Africa.
+                  </p>
+
+                  <div className="flex items-center gap-1.5">
+                    {socials.map(({ label, href, icon }) => (
+                      <a
+                        key={label}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={label}
+                        className="w-8 h-8 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-white/45 hover:bg-accent-gold hover:border-accent-gold hover:text-primary-navy hover:scale-110 transition-all duration-300"
+                      >
+                        {icon}
+                      </a>
+                    ))}
                   </div>
-                </div>
-              </Link>
-
-              <p className="font-body text-white/50 text-[11px] sm:text-xs leading-relaxed mb-4 max-w-[280px]">
-                Hass Crest Capital is a CMA-licensed investment firm delivering Sharia-compliant wealth solutions across East Africa.
-              </p>
-
-
-              <div className="flex items-center gap-1.5">
-                {socials.map(({ label, href, icon }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={label}
-                    className="w-8 h-8 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-white/45 hover:bg-accent-gold hover:border-accent-gold hover:text-primary-navy hover:scale-110 transition-all duration-300"
-                  >
-                    {icon}
-                  </a>
-                ))}
+                </motion.div>
               </div>
-            </motion.div>
+            </div>
 
-            {/* Quick Links */}
-            <motion.div 
-              className="lg:col-span-2" 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h4 className="font-display text-[9px] sm:text-[10px] tracking-[0.24em] uppercase text-white/35 font-semibold mb-3">
-                Quick Links
-              </h4>
-              <ul className="space-y-2">
-                {quickLinks.map((link) => (
-                  <li key={link.label}>
-                    <FooterLink href={link.href}>{link.label}</FooterLink>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            {/* Right side - Links and Contact */}
+            <div className="flex-1 lg:flex-none">
+              <div className="grid grid-cols-3 gap-6 sm:gap-8">
+                {/* Quick Links */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                  <h4 className="font-display text-[9px] sm:text-[10px] tracking-[0.24em] uppercase text-white/35 font-semibold mb-3">
+                    Quick Links
+                  </h4>
+                  <ul className="space-y-2">
+                    {quickLinks.map((link) => (
+                      <li key={link.label}>
+                        <FooterLink href={link.href}>{link.label}</FooterLink>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
 
-            {/* Company */}
-            <motion.div 
-              className="lg:col-span-2" 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <h4 className="font-display text-[9px] sm:text-[10px] tracking-[0.24em] uppercase text-white/35 font-semibold mb-3">
-                Company
-              </h4>
-              <ul className="space-y-2">
-                {companyLinks.map((link) => (
-                  <li key={link.label}>
-                    <FooterLink href={link.href}>{link.label}</FooterLink>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+                {/* Company */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  <h4 className="font-display text-[9px] sm:text-[10px] tracking-[0.24em] uppercase text-white/35 font-semibold mb-3">
+                    Company
+                  </h4>
+                  <ul className="space-y-2">
+                    {companyLinks.map((link) => (
+                      <li key={link.label}>
+                        <FooterLink href={link.href}>{link.label}</FooterLink>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
 
-            {/* Resources */}
-            <motion.div 
-              className="lg:col-span-2" 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <h4 className="font-display text-[9px] sm:text-[10px] tracking-[0.24em] uppercase text-white/35 font-semibold mb-3">
-                Resources
-              </h4>
-              <ul className="space-y-2">
-                {resourceLinks.map((link) => (
-                  <li key={link.label}>
-                    <FooterLink href={link.href}>{link.label}</FooterLink>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+                {/* Resources */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                  <h4 className="font-display text-[9px] sm:text-[10px] tracking-[0.24em] uppercase text-white/35 font-semibold mb-3">
+                    Resources
+                  </h4>
+                  <ul className="space-y-2">
+                    {resourceLinks.map((link) => (
+                      <li key={link.label}>
+                        <FooterLink href={link.href}>{link.label}</FooterLink>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </div>
+            </div>
 
             {/* Contact */}
-            <motion.div 
-              className="lg:col-span-2" 
+            <motion.div
+              className="lg:w-64"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              <h4 className="font-display text-[9px] sm:text-[10px] tracking-[0.24em] uppercase text-white/35 font-semibold mb-3">
+              <h4 className="font-display text-[9px] sm:text-[10px] tracking-[0.24em] uppercase text-white/35 font-semibold mb-4">
                 Contact
               </h4>
-              <ul className="space-y-2.5">
+              <ul className="space-y-3">
                 <li className="flex items-start gap-2.5 group">
-                  <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-accent-gold/30 transition-colors duration-300">
-                    <ShieldCheck className="w-3 h-3 text-accent-gold/70" strokeWidth={2} />
-                  </div>
-                  <span className="font-body text-white/50 text-[11px] sm:text-xs leading-relaxed pt-1">
-                    CMA and RBA
-                    <br />
-                    CMA-licensed Investment Firm
-                  </span>
-                </li>
-                <li className="flex items-start gap-2.5 group">
-                  <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-accent-gold/30 transition-colors duration-300">
-                    <MapPin className="w-3 h-3 text-accent-gold/70" strokeWidth={2} />
-                  </div>
-                  <span className="font-body text-white/50 text-[11px] sm:text-xs leading-relaxed pt-1">
-                    6th Floor, Prudential Building
-                    <br />
-                    Wabera Street, Nairobi, Kenya
-                  </span>
-                </li>
-                <li className="flex items-start gap-2.5 group">
-                  <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-accent-gold/30 transition-colors duration-300">
-                    <MapPin className="w-3 h-3 text-accent-gold/70" strokeWidth={2} />
-                  </div>
-                  <span className="font-body text-white/50 text-[11px] sm:text-xs leading-relaxed pt-1">
-                    HAPCO FZE UNIT 301-304
-                    <br />
-                    Jumeirah Business Center 5, Plot NO. W1
-                    <br />
-                    Jumeirah Lakes Towers, Dubai U.A.E
-                  </span>
-                </li>
-                <li className="flex items-center gap-2.5 group">
-                  <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-accent-gold/30 transition-colors duration-300">
+                  <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-accent-gold/30 transition-colors duration-300 mt-0.5">
                     <Mail className="w-3 h-3 text-accent-gold/70" strokeWidth={2} />
                   </div>
-                  <Link
-                    to="/contact"
-                    className="font-body text-white/50 text-[11px] sm:text-xs hover:text-accent-gold transition-colors duration-300"
-                  >
-                    info@hasscrest.com
-                  </Link>
+                  <div className="flex flex-col gap-1">
+                    <span className="font-body text-white/70 text-[10px] font-semibold uppercase tracking-wide">Email</span>
+                    <Link
+                      to="/contact"
+                      className="font-body text-white/50 text-[11px] sm:text-xs hover:text-accent-gold transition-colors duration-300"
+                    >
+                      info@hasscrest.com
+                    </Link>
+                  </div>
                 </li>
-                <li className="flex items-center gap-2.5 group">
-                  <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-accent-gold/30 transition-colors duration-300">
+                <li className="flex items-start gap-2.5 group">
+                  <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-accent-gold/30 transition-colors duration-300 mt-0.5">
                     <Phone className="w-3 h-3 text-accent-gold/70" strokeWidth={2} />
                   </div>
-                  <a
-                    href="tel:+971444410564"
-                    className="font-body text-white/50 text-[11px] sm:text-xs hover:text-accent-gold transition-colors duration-300"
-                  >
-                    +971 4 444 10564
-                  </a>
+                  <div className="flex flex-col gap-1">
+                    <span className="font-body text-white/70 text-[10px] font-semibold uppercase tracking-wide">Phone</span>
+                    <a
+                      href="tel:+971444410564"
+                      className="font-body text-white/50 text-[11px] sm:text-xs hover:text-accent-gold transition-colors duration-300"
+                    >
+                      +971 4 444 10564
+                    </a>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2.5 group">
+                  <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-accent-gold/30 transition-colors duration-300">
+                    <MapPin className="w-3 h-3 text-accent-gold/70" strokeWidth={2} />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="font-body text-white/70 text-[10px] font-semibold uppercase tracking-wide">Offices</span>
+                    <span className="font-body text-white/50 text-[11px] sm:text-xs leading-relaxed">
+                      6th Floor, Prudential Building, Wabera Street, Nairobi, Kenya
+                      <br />
+                      <br />
+                      Jumeirah Business Center 5, Plot NO. W1, Jumeirah Lakes Towers, UNIT 301-304 Dubai U.A.E
+                    </span>
+                  </div>
                 </li>
               </ul>
             </motion.div>
