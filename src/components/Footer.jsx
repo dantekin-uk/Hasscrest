@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowUpRight, Mail, MapPin, ShieldCheck } from 'lucide-react'
+import { ArrowUpRight, Mail, MapPin, ShieldCheck, Phone } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
@@ -246,9 +246,9 @@ function Footer() {
                     <ShieldCheck className="w-3 h-3 text-accent-gold/70" strokeWidth={2} />
                   </div>
                   <span className="font-body text-white/50 text-[11px] sm:text-xs leading-relaxed pt-1">
-                    CMA & RBA Licensed
+                    CMA and RBA
                     <br />
-                    Investment Firm
+                    CMA-licensed Investment Firm
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5 group">
@@ -261,6 +261,18 @@ function Footer() {
                     Wabera Street, Nairobi, Kenya
                   </span>
                 </li>
+                <li className="flex items-start gap-2.5 group">
+                  <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-accent-gold/30 transition-colors duration-300">
+                    <MapPin className="w-3 h-3 text-accent-gold/70" strokeWidth={2} />
+                  </div>
+                  <span className="font-body text-white/50 text-[11px] sm:text-xs leading-relaxed pt-1">
+                    HAPCO FZE UNIT 301-304
+                    <br />
+                    Jumeirah Business Center 5, Plot NO. W1
+                    <br />
+                    Jumeirah Lakes Towers, Dubai U.A.E
+                  </span>
+                </li>
                 <li className="flex items-center gap-2.5 group">
                   <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-accent-gold/30 transition-colors duration-300">
                     <Mail className="w-3 h-3 text-accent-gold/70" strokeWidth={2} />
@@ -271,6 +283,17 @@ function Footer() {
                   >
                     info@hasscrest.com
                   </Link>
+                </li>
+                <li className="flex items-center gap-2.5 group">
+                  <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-accent-gold/30 transition-colors duration-300">
+                    <Phone className="w-3 h-3 text-accent-gold/70" strokeWidth={2} />
+                  </div>
+                  <a
+                    href="tel:+971444410564"
+                    className="font-body text-white/50 text-[11px] sm:text-xs hover:text-accent-gold transition-colors duration-300"
+                  >
+                    +971 4 444 10564
+                  </a>
                 </li>
               </ul>
             </motion.div>
