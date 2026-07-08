@@ -147,7 +147,7 @@ function Footer() {
                 </div>
                 <div className="leading-tight">
                   <div className="font-display font-semibold tracking-[0.08em] text-white">
-                    Hass Crest Capital
+                    Hass Crest Capital LImited
                   </div>
                 </div>
               </Link>
