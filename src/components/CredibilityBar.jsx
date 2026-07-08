@@ -5,7 +5,7 @@ import { ShieldCheck, Scale, Landmark } from 'lucide-react'
 const items = [
   {
     title: 'Regulated oversight',
-    subtext: 'Capital Markets Authority licensed',
+    subtext: 'CMA & RBA licensed',
     icon: ShieldCheck,
     gradient: 'from-navy-deep to-navy-mid',
     titleHover: 'group-hover:from-navy-deep group-hover:to-navy-light',

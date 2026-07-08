@@ -4,24 +4,20 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
 const companyLinks = [
-  { label: 'The Firm', href: '/#the-firm' },
-  { label: 'Wealth Solutions', href: '/#wealth-solutions' },
-  { label: 'Private Markets', href: '/#private-markets' },
-  { label: 'Institutional', href: '/#institutional' },
+  { label: 'The Firm', href: '/the-firm' },
+  { label: 'Wealth Solutions', href: '/wealth-solutions' },
+  { label: 'Private Markets', href: '/private-markets' },
+  { label: 'Institutional', href: '/institutional' },
 ]
 
 const quickLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Our Strategies', href: '/#strategies' },
   { label: 'Blog', href: '/blog' },
   { label: 'Get In Touch', href: '/contact' },
 ]
 
 const resourceLinks = [
-  { label: 'Our Strategies', href: '/#strategies' },
   { label: 'Blog', href: '/blog' },
-  { label: 'News', href: '/#news' },
-  { label: 'Insights', href: '/#insight' },
 ]
 
 const socials = [
@@ -250,9 +246,9 @@ function Footer() {
                     <ShieldCheck className="w-3 h-3 text-accent-gold/70" strokeWidth={2} />
                   </div>
                   <span className="font-body text-white/50 text-[11px] sm:text-xs leading-relaxed pt-1">
-                    Capital Markets Authority
+                    CMA & RBA Licensed
                     <br />
-                    Licensed Investment Firm
+                    Investment Firm
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5 group">

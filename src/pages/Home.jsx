@@ -35,10 +35,10 @@ function Home() {
       <Strategies />
 
       <BlogTeaser />
-      
+
       <Mandates />
 
-      <NewsUpdates />
+      {/* <NewsUpdates /> */}
       <Cta
         badge="Private Consultation"
         title="Discuss Your Mandate"
